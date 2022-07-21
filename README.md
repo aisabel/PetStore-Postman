@@ -13,6 +13,12 @@
 <ul>
   <li><a href="https://www.postman.com/product/what-is-postman>*Postman Version 9.25.1</a></li>
   <li><a href="https://nodejs.org/dist/v16.16.0/node-v16.16.0-x64.msi">*Node js LTS version 16.16</a></li>
+   <li><a href="https://www.npmjs.com/package/newman">*Newman 5.3.2</a></li>
   <li><a href="https://github.com/DannyDainton/newman-reporter-htmlextra">*html reporter extra </a></li>
   <li><a href="https://docs.travis-ci.com/user/tutorial/">*Travis CI </a></li>
+   
 </ul>
+
+  
+<h2>Install: How to run tests: (Documentation steps in progress...)</h2>
+   
