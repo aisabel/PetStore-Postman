@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-- "18"
+- "18.6.0"
 
+before_install:
+  - "npm config set spin false"
+  
 install:
 - npm install newman
 - npm install -g newman-reporter-htmlextra
@@ -12,4 +15,4 @@ before_script:
 - node_modules/.bin/newman --version
 
 script:
-- node_modules/.bin/newman run SwaggerPetStore.postman_collection.json -e PetStoreEnv.postman_environment.json --reporters cli, htmlextra-export reports/petStoreReport.html
+- node_modules/.bin/newman run SwaggerPetStore.postman_collection.json -e PetStoreEnv.postman_environment.json --reporters cli,htmlextra-export reports/petStoreReport.html
