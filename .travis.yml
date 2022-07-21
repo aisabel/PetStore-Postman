@@ -3,7 +3,8 @@ node_js:
 - "18.6.0"
 
 install:
-- npm install -g newman
+- npm install
+- npm install newman
 - npm install -g newman-reporter-htmlextra
 
 before_script:
