@@ -19,6 +19,19 @@
    
 </ul>
 
+<h2>TestingFramework Structure:</h2>
+In order to provide a clear functional framework, the structure has been settup as below:</br>
+</br>
+
+<ul>
+|--SwaggerPetStore/reportst</br>
+|--SwaggerPetStore/tests:</br>
+<ul>
+ <li>PetStoreEnv.postman_collection.json = environment defined to run collection</li>
+ <li>SwaggerPetStore.postman_collection.json = postman collection</li>
+</ul>
+</ul>
+
   
 <h2>Install: How to run tests: (Documentation steps in progress...)</h2>
    
