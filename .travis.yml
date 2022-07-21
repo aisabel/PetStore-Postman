@@ -1,11 +1,16 @@
 language: node_js
 node_js:
-- "18.6.0"
+- "18"
 
 before_install:
+  - npm i -g npm@version-number
   - "npm config set spin false"
+
+cache:
+  npm: false
   
 install:
+- npm install
 - npm install newman
 - npm install -g newman-reporter-htmlextra
 
