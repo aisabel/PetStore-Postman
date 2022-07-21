@@ -1,7 +1,6 @@
 # SwaggerPetStore-Postman
 [![Build Status](https://app.travis-ci.com/aisabel/SwaggerPetStore-Postman.svg?branch=main)](https://app.travis-ci.com/aisabel/SwaggerPetStore-Postman.svg?branch=main)
 
-This collection contains a set of request for 
 
 <h2>Business Requirement:</h2>
 <p align="justified">Create automated tests to cover at least the CRUD (create, read, update, delete) operations on a pet store website</p>
