@@ -33,5 +33,5 @@ In order to provide a clear functional framework, the structure has been settup 
 </ul>
 
   
-<h2>Install: How to run tests: (Documentation steps in progress...)</h2>
+<h2>How to run tests: (Documentation steps in progress...)</h2>
    
