@@ -7,4 +7,4 @@ install:
 - npm install -g newman-reporter-htmlextra
 
 script:
-- node_modules/.bin/newman run tests/SwaggerPetStore.postman_collection.json -e tests/PetStoreEnv.postman_environment.json --reporters cli, htmlextra-export ./reports/petStoreReport.html
+- node_modules/.bin/newman run tests/SwaggerPetStore.postman_collection.json -e tests/PetStoreEnv.postman_environment.json --reporters cli,htmlextra,junit --reporter-htmlextra-export newman/petStoreReport.html --reporter-junit-export newman/JunitReport.html
