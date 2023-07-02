@@ -1,0 +1,52 @@
+name: TestBuild
+
+#Run build within each push of code to master branch
+on:
+  push:
+    branches: [ "master" ]    
+    
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Install Node on the runner
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      # Install the newman command line utility and also install the html extra reporter
+      - name: Install newman
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+
+      # Make directory to upload the test results
+      - name: Make Directory for results
+        run: mkdir -p testResults
+
+      # Run the POSTMAN collection
+      - name: Run POSTMAN collection
+        run: |
+          newman run tests/SwaggerPetStore.postman_collection.json -e tests/PetStoreEnv.json --bail -r cli,htmlextra --reporter-htmlextra-export testResults/PostmanResult.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          # Upload the contents of Test Results directory to workspace
+          
+      #Create and output results
+      #The reports land in actions tab > summary > Artifacts
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
+        with:
+          name: RunReports
+          path: testResults
+          
+ # Deployment job
+#  deploy:
+ #   runs-on: ubuntu-latest
+ #   needs: test-api
+ #   steps:
+ #     - name: Deploy to GitHub Pages
+ #        id: deployment
+ #       uses: actions/deploy-pages@v2
