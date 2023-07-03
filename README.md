@@ -1,4 +1,4 @@
-# SwaggerPetStore-Postman
+
 [![Build Status](https://app.travis-ci.com/aisabel/SwaggerPetStore-Postman.svg?branch=main)](https://app.travis-ci.com/aisabel/SwaggerPetStore-Postman.svg?branch=main)
 
 
@@ -7,7 +7,7 @@
 
 <h2>TestFramework Description:</h2>
 <p align="justified">This test suite was designed to meet business requirements by createing automated test based on a swagger api: petstore.swagger.io</br>
- Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. This test suite is configured to be continuosly integrated in <a href="https://app.travis-ci.com/github/aisabel/SwaggerPetStore-Postman/builds">Travis</a> for a fast pace development environment.</p>
+ Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses. </br>This test suite is configured to be continuosly integrated in <a href="https://app.travis-ci.com/github/aisabel/SwaggerPetStore-Postman/builds">Travis</a> for a fast pace development environment.</p>
  
  <h2>Specifications:</h2>
 <ul>
@@ -24,8 +24,8 @@ In order to provide a clear functional framework, the structure has been settup 
 </br>
 
 <ul>
-|--SwaggerPetStore/reportst</br>
-|--SwaggerPetStore/tests:</br>
+|--results</br>
+|--tests:</br>
 <ul>
  <li>PetStoreEnv.postman_collection.json = environment defined to run collection</li>
  <li>SwaggerPetStore.postman_collection.json = postman collection</li>
